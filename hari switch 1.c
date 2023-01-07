@@ -4,49 +4,58 @@ int main ()
 {
     int i,day=0,d,x;
     hari:
-    printf("\n 1 SUNDAY \n 2 MONDAY \n 3 TUESDAY \n 4 WEDNESDAY \n 5 THURSDAY \n 6 FRIDAY \n 7 SATURDAY \n");
-    printf("\n Enter your preferred day : ");
+    printf("\n 0 SUNDAY \n 1 MONDAY \n 2 TUESDAY \n 3 WEDNESDAY \n 4 THURSDAY \n 5 FRIDAY \n 6 SATURDAY \n");
+    printf("\n Enter your preferred day in given above number : ");
     scanf("%d",&day);
-    if(day<=7)
+    if(day>=0&&day<=6)
     {
-    int sunday=1,monday=2,tuesday=3,wednesday=4,thursday=5,friday=6,saturday=7;
-    printf("Enter the your preferred increment days :");
+    printf("\n Enter the your preferred increment days :");
     scanf("%d",&i);
     i=day+i;
     d=i%7;
-    }
     switch(d)
     {
+    case 0:
+        printf("\n Your preferred day is SUNDAY");
+        break;
     case 1:
-        printf("Your preferred day is SUNDAY");
+        printf("\n Your preferred day is MONDAY ");
         break;
     case 2:
-        printf("Your preferred day is MONDAY \n");
+        printf("\nYour preferred day is TUESDAY");
         break;
     case 3:
-        printf("Your preferred day is TUESDAY \n");
+        printf("\n Your preferred day is WEDNESDAY");
         break;
     case 4:
-        printf("Your preferred day is WEDNESDAY \n");
+        printf("\n Your preferred day is THURSDAY");
         break;
     case 5:
-        printf("Your preferred day is THURSDAY \n");
+        printf("\n Your preferred day is FRIDAY");
         break;
     case 6:
-        printf("Your preferred day is FRIDAY \n");
+        printf("\n Your preferred day is SATURDAY");
         break;
-    case 7:
-        printf("Your preferred day is SATURDAY \n");
-        break;
-    default:
-        printf("Enter the valid day \n");
-        break;
+    //default:
+        //printf("\n Enter the valid day ");
+        //break;
     }
-    printf("\n Do you want to continue press any number  : ");
+    }
+    else
+    {
+        printf("\n Enter the valid day ");
+    }
+    // printf("\n Do you want to continue press any number  : ");
+    printf("\n Do you want to continue press 1 : ");
     scanf("%d",&x);
-    if (x<=0||x>=0)
+    //if (x<=0||x>=0)
+    if (x==1)
     {
     goto hari;
+    }
+    else
+    {
+        printf("\n Thank you Visit again");
     }
     return 0;
 }
